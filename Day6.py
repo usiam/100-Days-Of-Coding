@@ -24,7 +24,7 @@ Created on Tue May 25 10:07:11 2021
 
 #step 1 def(ining) the function
 def printIntroduction(name, age, country):
-    print(f"Hello my name is {name}. "
+        print(f"Hello my name is {name}. "
           f"I'm {age} yrs old and I'm from {country}.")
     
 #step 2 calling the function with proper parameters
