@@ -57,7 +57,7 @@ def dealCards(cardsInHand):
 
 def score(cardsList):
     if sum(cardsList) == 21 and len(cardsList) == 2:
-        return -1 #represents a blackjack
+        return 0 #represents a blackjack
     
     if 11 in cardsList and sum(cardsList) > 21:
         cardsList.remove(11)
@@ -65,30 +65,22 @@ def score(cardsList):
    
     return sum(cardsList)
 
-def checkBlackjack(playerScore, comScore):
-    if playerScore == -1:
-        if comScore == -1:
-            print("    Both scores are 21.")
-            return True
-        else:
-            print("    Blackjack! You win.")
-            return True
-    elif comScore == -1:
-        print("    Blackjack! You lose.")
-        return True
-
-    return False
 
 def compare(playerScore, comScore):
-    if playerScore == comScore:
+    #the and condition is because if playerScore > 21 player loses all the time
+    if playerScore == comScore and playerScore < 21: 
         print("    It's a draw!")
+    elif comScore == 0:
+        print("    Dealer has a blackjack! You lose.")
+    elif playerScore == 0:
+         print("    Blackjack! You win.")
     elif playerScore > 21:
         print("    You went over! You lose.")
     elif comScore > 21:
         print("    Dealer went over! You win!")
-    elif playerScore > comScore:
+    elif playerScore > comScore:    
         print("    Player wins!")
-    elif playerScore < comScore:
+    else:
         print("    Player loses.")
 
 
@@ -104,10 +96,8 @@ def playGame():
            
         print(f"\n    Your cards: {playerCards}, current score: {playerScore}")
         print(f"    Computer's first card: {comCards[0]}")
-        
-        blackjack = checkBlackjack(playerScore, comScore)
-        
-        if blackjack or playerScore > 21:
+  
+        if comScore == 0 or playerScore == 0 or playerScore > 21:
             endGame = True
         else:
             draw = input("\nType 'y' to get another card and 'n' to pass: ")
@@ -117,7 +107,7 @@ def playGame():
                 print("\n")
                 endGame = True
     
-    while comScore < 17 and comScore != -1:
+    while comScore < 17 and comScore != 0:
         dealCards(comCards)
         comScore = score(comCards)
     
@@ -138,7 +128,8 @@ if rulePrompt == 'y':
 while input("\nDo you want to play a game of Blackjack? Type 'y' or 'n': ") == 'y':
     clear()
     playGame()
-    
+  
+print("\nThanks for playing~")
 
 # =============================================================================
 # End of Day 11
