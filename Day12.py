@@ -114,8 +114,7 @@ def setDifficulty():
   
     return attempts
      
-def guess():
-    print(NUMBER)
+def playGame():
     attempts = setDifficulty()    
     print(f"You get {attempts} attempts.") 
     
@@ -127,7 +126,7 @@ def guess():
         attempts -= 1   
         
         if guess == NUMBER or attempts <= 0:
-            print("\nGame over!")
+            print(f"\nGame over! The number was {NUMBER}.")
             gameOver = True
             break
         else:
@@ -135,9 +134,6 @@ def guess():
         
         print(f"\nYou have {attempts} attempts left.")
         
-def playGame():
-    guess()
-
 print(logo)
 print("Welcome to the Number Guessing Game!")
 print("\nI'm thinking of a number between 1 and 100.")  
