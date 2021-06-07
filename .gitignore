@@ -3,3 +3,5 @@ Include/
 Lib/
 Scripts/
 */*.cfg
+*/*.iml
+*/*.xml
