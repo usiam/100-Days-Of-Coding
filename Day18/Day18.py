@@ -68,16 +68,37 @@ def spirograph(gapAngle):
         tim.setheading(tim.heading() + gapAngle) # sets the heading to be the curr heading + however much angular
                                                     # gap the user wants between circles
 
+def makeCircularPatters(nPatterns):
+    screen.tracer(0)
+    for n in range(nPatterns):
+        tim.speed(5)
+        tim.penup()
+        x, y = random.randint(-400, 400), random.randint(-400, 400)
+        randPos = (x,y)
+        tim.goto(randPos)
+        tim.pendown()
+
+        color = randomColor()
+        tim.color(color)
+
+        circleSize = random.randint(10, 40)
+        tim.pensize(random.randint(1, 5))
+
+        for i in range(6):
+            tim.circle(circleSize)
+            tim.left(60)
+            screen.update()
 
 clear()
 print("Welcome to the basic turtle program!\n")
 print("Here are the things this program can draw for now: 1. N sided polygons, 2. All polygons upto your N Sided polygon, "
-      "3. Dashed line, 4. Random walk, 5. Spirograph\n")
-func = input("What do you want it to do? Choose any between 1-5: ")
+      "3. Dashed line, 4. Random walk, 5. Spirograph, 6. Circular patterns\n")
+func = input("What do you want it to do? Choose any between 1-6: ")
 
 turtle.colormode(255)
 tim = Turtle()
 screen = Screen()
+screen.bgcolor('black')
 turtle.screensize(screen.window_width(), screen.window_height())
 
 if func == '1':
@@ -98,12 +119,16 @@ elif func == '5':
     gap = float(input("How much angular gap do you want between each circle? "))
     screen.title('Spirograph')
     spirograph(gap)
+elif func == '6':
+    num = int(input("How many patterns do you want? "))
+    screen.title('Circular patterns')
+    makeCircularPatters(num)
 
 # 169. Tuples
 # (a, b, c)
 
-myTuple = (1, 2, 3)
-print(myTuple[0]) # prints 1
+# myTuple = (1, 2, 3)
+# print(myTuple[0]) # prints 1
 
 # unlike the elements in a list a tuple's elements are fixed you can only read it not write/assign i.e. it is immutable
 # myTuple[0] = 4 will give you an error.
@@ -111,4 +136,4 @@ print(myTuple[0]) # prints 1
 
 
 
-screen.exitonclick()
+screen.mainloop()
