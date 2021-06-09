@@ -38,12 +38,11 @@ while not gameOver:
         scoreboard.increaseScore(food.pencolor())
         food.newFood()
 
-        print(scoreboard.score)
-
     # Collision detection with wall
     if snake.head.xcor() > 245 or snake.head.xcor() < -245 or snake.head.ycor() > 245 or snake.head.ycor() < - 245:
         gameOver = True
         scoreboard.gameOver()
+
     # Collision detection with self
     for seg in snake.snakeBody[1:]:
             if snake.head.distance(seg) < 10:
