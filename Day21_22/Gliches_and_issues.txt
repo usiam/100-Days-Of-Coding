@@ -1,5 +1,5 @@
-Main issue:\
-Key unresponsive in terminal for some reason.\
-\
-Glitch:\
+Main issue:
+Key unresponsive in terminal for some reason.
+
+Glitch:
 Collision detection can be improved.
