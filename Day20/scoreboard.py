@@ -2,6 +2,7 @@ from turtle import Turtle
 
 ALIGNMENT, FONT = "center", ("Courier", 14, "bold")
 
+
 class Scoreboard(Turtle):
 
     def __init__(self):
@@ -10,11 +11,11 @@ class Scoreboard(Turtle):
         self.color('white')
         self.ht()
         self.penup()
-        self.setpos(x = 0, y = 230)
-        self.updateScoreboard()
+        self.setpos(x=0, y=230)
+        self.displayScoreboard()
 
-    def updateScoreboard(self):
-        self.write(f"Score: {self.score}", align = ALIGNMENT, font = FONT)
+    def displayScoreboard(self):
+        self.write(f"Score: {self.score}", align=ALIGNMENT, font=FONT)
 
     def increaseScore(self, color):
         if color == 'red':
@@ -22,8 +23,8 @@ class Scoreboard(Turtle):
         elif color == 'gold':
             self.score += 10
         self.clear()
-        self.updateScoreboard()
+        self.displayScoreboard()
 
     def gameOver(self):
         self.setpos(0, 0)
-        self.write("GAME OVER", align = ALIGNMENT, font = FONT)
+        self.write("GAME OVER", align=ALIGNMENT, font=FONT)
