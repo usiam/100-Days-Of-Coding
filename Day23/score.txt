@@ -1,0 +1,2 @@
+Highscore = 0
+This is the added text
