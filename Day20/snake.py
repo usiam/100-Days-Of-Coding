@@ -48,3 +48,10 @@ class Snake:
         snkSegment.color('white')
         snkSegment.setpos(position)
         self.snakeBody.append(snkSegment)
+
+    def reset(self):
+        for seg in self.snakeBody:
+            seg.goto(1500, 1500)
+        self.snakeBody.clear()
+        self.createBody()
+        self.head = self.snakeBody[0]

@@ -41,13 +41,13 @@ while not gameOver:
 
     # Collision detection with wall
     if snake.head.xcor() > 245 or snake.head.xcor() < -245 or snake.head.ycor() > 245 or snake.head.ycor() < - 245:
-        gameOver = True
-        scoreboard.gameOver()
+        scoreboard.resetScore()
+        snake.reset()
 
     # Collision detection with self
     for seg in snake.snakeBody[1:]:
         if snake.head.distance(seg) < 10:
-            gameOver = True
-            scoreboard.gameOver()
+            scoreboard.resetScore()
+            snake.reset()
 
 screen.mainloop()
