@@ -32,6 +32,11 @@ if __name__ == '__main__':
     rPaddle = Paddle(PADDLEXPOS, 0)
     lPaddle = Paddle(- PADDLEXPOS, 0)
 
+    maxScore = int(screen.textinput(title="", prompt='Choose the maximum score needed to win: '))
+
+    if maxScore:
+        gameOver = False
+
     screen.listen()
 
     screen.onkeypress(rPaddle.up, 'Up')
@@ -39,12 +44,6 @@ if __name__ == '__main__':
 
     screen.onkeypress(lPaddle.up, 'w')
     screen.onkeypress(lPaddle.down, 's')
-
-    maxScore = int(screen.textinput(title="", prompt='Choose the maximum score needed to win: '))
-
-    if maxScore:
-        gameOver = False
-
     while not gameOver:
         time.sleep(puck.puckSpeed)
         screen.update()
