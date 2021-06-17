@@ -1,7 +1,7 @@
 import random
 from turtle import Turtle
 
-SPEED = 0.03
+SPEED = 0.00005
 
 
 class Puck(Turtle):
@@ -10,8 +10,8 @@ class Puck(Turtle):
         self.penup()
         self.color('white')
         self.shape('square')
-        self.dx = random.choice([-10, 10])
-        self.dy = random.choice([-10, 10])
+        self.dx = random.choice([-5, 5])
+        self.dy = random.choice([-5, 5])
         self.puckSpeed = SPEED
 
     def move(self):
@@ -21,9 +21,11 @@ class Puck(Turtle):
 
     def changeDY(self):
         self.dy *= -1
+        print(self.puckSpeed)
 
     def changeDX(self):
         self.dx *= -1
+        print(self.puckSpeed)
 
     def softReset(self):
         self.goto(0, 0)
@@ -31,4 +33,4 @@ class Puck(Turtle):
         self.puckSpeed = SPEED
 
     def speedUp(self):
-        self.puckSpeed *= 0.95  # decreases the time.sleep() value and hence increases the speed
+        self.puckSpeed *= 0.0095  # decreases the time.sleep() value and hence increases the speed
