@@ -1,0 +1,5 @@
+Glitch:
+Nothing notable
+
+Flaws:
+Some of the 'cars' overlap each other. There is a way to fix that using if statements and checking to make sure the new car does not have the same ycor and that might be fixed later.
