@@ -65,7 +65,7 @@ websiteEntry.focus()
 websiteEntry.grid(row=1, column=1)
 
 userEntry = Entry(width=40)
-userEntry.insert(END, 'usiam@u.rochester.edu')
+userEntry.insert(END, 'email@emailProvider.com')
 userEntry.grid(row=2, column=1)
 
 passEntry = Entry(width=34)
