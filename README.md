@@ -32,3 +32,4 @@ Day 29: Using online APIs using the `requests` module\
 Day 30: Intro to `tkinter` module\
 Day 31: Pomodore program project\
 Day 32: Password generator and manager GUI program\
+Day 33: Flashcard to learn French words GUI program
