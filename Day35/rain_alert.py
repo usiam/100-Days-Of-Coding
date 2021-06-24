@@ -9,9 +9,9 @@ parameters = {
     'appid': APIKEY,
     'exclude': 'current,minutely,daily'
 }
-accountSID = "AC655ae9465ff0091029df7814713ebfed"
-authToken = '4d160850b82b4b25e1fdfbd87df15e54'
-trialNum = '+14159513966'
+accountSID = os.environ.get('SID_VAR')
+authToken = os.environ.get('AUTH_VAR')
+trialNum = os.environ.get('TRIAL_NUM')
 
 response = requests.get(OWMEndpoint, params=parameters)
 response.raise_for_status()
