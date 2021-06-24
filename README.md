@@ -32,4 +32,7 @@ Day 29: Using online APIs using the `requests` module\
 Day 30: Intro to `tkinter` module\
 Day 31: Pomodore program project\
 Day 32: Password generator and manager GUI program\
-Day 33: Flashcard to learn French words GUI program
+Day 33: Flashcard to learn French words GUI program\
+Day 34: Quiz app GUI program\
+Day 35: Automating rain alert with text messages through twilio and pythonanywhere
+Day 36: Portfolio stock price change alert script using twilio text messages 
