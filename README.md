@@ -34,7 +34,7 @@ Day 31: Pomodore program project\
 Day 32: Password generator and manager GUI program\
 Day 33: Flashcard to learn French words GUI program\
 Day 34: Quiz app GUI program\
-Day 35: Automating rain alert with text messages through *twilio* and *pythonanywhere*\
-Day 36: Portfolio stock price change alert script using *twilio* text messages\
-Day 37: Habit tracking with *pixela* through API POST, PUT, and DELETE\
-Day 38: Workout tracker with a *NLP API - Nutritionix* and tracking with *Sheetly* API to automate google sheet entries
+Day 35: Automating rain alert with text messages through twilio and pythonanywhere\
+Day 36: Portfolio stock price change alert script using twilio text messages\
+Day 37: Habit tracking with pixela through API POST, PUT, and DELETE\
+Day 38: Workout tracker with a NLP API - Nutritionix and tracking with Sheetly API to automate google sheet entries
