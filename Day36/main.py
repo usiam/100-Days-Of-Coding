@@ -57,8 +57,8 @@ for (STOCK_NAME, COMPANY_NAME) in zip(STOCK_NAMES, COMPANY_NAMES):
 
         news_data = news_resp.json()
         top_three_articles = news_data['articles'][:3]
-        x = [{'Headline': top_three_articles[i]['title'], 'Brief': top_three_articles[i]['description']} for i in
-             range(3)]
+        x = [{'Headline': top_three_articles[i]['title'], 'Brief': top_three_articles[article]['description']} for
+             article in top_three_articles]
 
         msg = f"\n{STOCK_NAME}: {symb}{abs(percent_diff)}%\n\n"
         for i in range(3):
@@ -68,6 +68,6 @@ for (STOCK_NAME, COMPANY_NAME) in zip(STOCK_NAMES, COMPANY_NAMES):
             .create(
             body=msg,
             from_=trialNum,
-            to='+19294242480'
+            to=os.environ.get('MY_NUM')
         )
         print(message.status)
