@@ -26,7 +26,7 @@ Day 23: Reading and writing to files using python.\
 Day 24: List and Dictionary comprehension\
 Day 25: Error handling in python\
 Day 26: Turtle crossing game project\
-Day 27: Reading and writing to csv files using python. US States Game project\
+Day 27: Reading and writing to csv files using `pandas`. US States Game project\
 Day 28: `datetime` and `smtplib` modules to send automated emails\
 Day 29: Using online APIs using the `requests` module\
 Day 30: Intro to `tkinter` module\
